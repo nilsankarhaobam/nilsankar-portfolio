@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-base-200">
+    <div className="flex flex-col min-h-screen bg-base-200 ">
 
       {/* ---------------- HERO SECTION ---------------- */}
       <section className="py-16 text-center space-y-6">
@@ -20,7 +20,7 @@ export default function Home() {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-600"
+          className="text-lg md:text-xl  "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -28,7 +28,7 @@ export default function Home() {
           Building the Future Through Research & Code
         </motion.p>
 
-        <p className="max-w-3xl mx-auto text-gray-700 px-6">
+        <p className="max-w-3xl mx-auto  px-6">
           Technology is not just tools — it&apos;s a gateway to exploration.
           I enjoy diving deep into complex problems, discovering new possibilities,
           and transforming ideas into innovative solutions.
@@ -61,19 +61,19 @@ export default function Home() {
             Discover Life
           </h2>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className=" leading-relaxed">
             Life is not meant to be consumed — it is meant to be explored.
             Creation is one of the most powerful ways to understand the world.
             Every idea begins as curiosity. Every breakthrough begins with experimentation.
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="leading-relaxed">
             Growth happens when we step outside routine thinking. Innovation
             emerges from iterations, failures, experiments, and unexpected
             connections between ideas.
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className=" leading-relaxed">
             Creation is more than writing code. It is about solving problems,
             designing better systems, and building experiences that make life
             smarter and more meaningful.
@@ -106,6 +106,40 @@ export default function Home() {
           and scientific discovery.
         </p>
       </motion.section>
+
+      {/* Cosmic Universe sections begins */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:px-20 px-6 py-16  ">
+        
+
+        <motion.div initial={{x:-80}} whileInView={{ x:0}} transition={{duration:2}} viewport={{ once: true }} className="space-y-3 md:w-1/2">
+          <div>
+          <h1 className="text-2xl font-semibold text-center">“The Void Between Stars” — My Personal Reflection on the Unknown</h1>
+        </div>
+          <p className=" leading-relaxed">
+            There&apos;s a silence in space — not empty, but deep. It&apos;s the quiet between stars, where no light has touched, and no voice has been heard. I&apos;ve spent years staring at it — not with a telescope, but with my mind. I wonder: if the universe is vast, why do we feel so small? Why do we crave meaning? Why do we dream of galaxies, of alien worlds, of time travel?
+          </p>
+
+          <p className=" leading-relaxed">
+            This is my story — not about discoveries, but about questions. About the awe of being alone in a cosmic ocean, and the courage to ask: “What if there&apos;s more than we know?” I built this page not to show off code — but to hold space for my thoughts. I let animations flow like nebulae, let hover effects mimic stars blinking, and let the layout feel like a journey through the dark — until you find light.
+          </p>
+
+          <p className=" leading-relaxed">
+            This is not a project. It&apos;s a conversation with the universe — and with myself.
+          </p>
+        </motion.div>
+
+         <motion.div initial={{x:180}} whileInView={{ x:0}} transition={{duration:2}} viewport={{ once: true }}>
+          <Image
+            src="/images/cars.jpg"
+            alt="Universe"
+            width={500}
+            height={500}
+            priority
+            className="w-full h-auto"
+          />
+        </motion.div>
+      </div>
+      {/* Cosmic Universe sections ends */}
 
     </div>
   );

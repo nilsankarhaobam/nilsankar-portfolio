@@ -1,6 +1,15 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 
 const Navbar = () => {
+    const [darkMode, setdarkMode] = useState(false);
+    const toggleDarkMode =(e)=>{
+        e.preventDefault();
+        setdarkMode(!darkMode);
+        const theme = darkMode ? 'light' : 'dark'
+        document.documentElement.setAttribute("data-theme", theme)
+
+    }
   return (
     <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
@@ -10,7 +19,7 @@ const Navbar = () => {
             </div>
             <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 min-h-screen p-2 shadow">
                 <li><a>Home</a></li>
                 <li>
                 <a>Other Universe</a>
@@ -40,7 +49,9 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="navbar-end">
-            <a className="btn">Dark Theme</a>
+            <button className='btn btn-sm btn-outline' onClick={toggleDarkMode}>
+                {darkMode ?  'Light Mode' : 'Dark Mode'}
+            </button>
         </div>
         </div>
   );
