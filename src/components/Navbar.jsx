@@ -42,6 +42,7 @@ const Navbar = () => {
                 <ul className="p-2 bg-base-100 w-40 z-1">
                     <li><a>Coming Soon</a></li>
                     <li><a>Coming Soon</a></li>
+                    <li><a>Coming Soon</a></li>
                 </ul>
                 </details>
             </li>
