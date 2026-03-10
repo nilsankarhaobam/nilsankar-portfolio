@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-base-200 ">
 
       {/* ---------------- HERO SECTION ---------------- */}
-      <section className="py-16 text-center space-y-6">
+      <section className="pt-16 pb-8 text-center space-y-6">
 
         <motion.h1
           className="text-3xl md:text-5xl font-bold"
@@ -38,7 +38,7 @@ export default function Home() {
 
       {/* ---------------- DISCOVER SECTION ---------------- */}
       <motion.section
-        className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-20 py-16"
+        className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-20 pt-8 pb-16"
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* ---------------- AI SECTION ---------------- */}
       <motion.section
-        className="mx-6 md:mx-20 mb-20 bg-amber-500 p-10 rounded-xl text-center space-y-4"
+        className="mx-6 md:mx-20 bg-amber-500 p-10 rounded-xl text-center space-y-4"
         initial={{ opacity: 0, x: -60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
@@ -108,10 +108,10 @@ export default function Home() {
       </motion.section>
 
       {/* Cosmic Universe sections begins */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:px-20 px-6 py-16  ">
+      <motion.div initial={{x:-80}} whileInView={{ x:0}} transition={{duration:2}} viewport={{ once: true }} className="flex flex-col md:flex-row items-center justify-center gap-6 md:px-20 px-6 py-16  ">
         
 
-        <motion.div initial={{x:-80}} whileInView={{ x:0}} transition={{duration:2}} viewport={{ once: true }} className="space-y-3 md:w-1/2">
+        <div  className="space-y-3 md:w-1/2">
           <div>
           <h1 className="text-2xl font-semibold text-center">“The Void Between Stars” — My Personal Reflection on the Unknown</h1>
         </div>
@@ -126,9 +126,9 @@ export default function Home() {
           <p className=" leading-relaxed">
             This is not a project. It&apos;s a conversation with the universe — and with myself.
           </p>
-        </motion.div>
+        </div>
 
-         <motion.div initial={{x:180}} whileInView={{ x:0}} transition={{duration:2}} viewport={{ once: true }}>
+         <div>
           <Image
             src="/images/cars.jpg"
             alt="Universe"
@@ -137,9 +137,28 @@ export default function Home() {
             priority
             className="w-full h-auto"
           />
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
       {/* Cosmic Universe sections ends */}
+
+      {/* Explore sections begin */}
+
+      <motion.div initial={{opacity:0, y:80}} whileInView={{opacity:1, y:0}} transition={{duration:1}} viewport={{once:true}} className="mx-6 md:mx-20 mb-20 bg-blue-400 p-10 rounded-xl text-center space-y-4 ">
+        <div>
+          <h1 className="text-2xl md:text-3xl font-semibold text-white">Discover More</h1>
+        </div>
+
+        <div>
+          <p className="text-amber-50">
+            Dive deeper into a collection of ideas, experiments, and creations. From projects and research to thoughts and discoveries, this space reflects my journey through technology and innovation.
+          </p>
+        </div>
+
+        <div>
+          <button className="btn btn-primary">Explore</button>
+        </div>
+      </motion.div>
+      {/* Explore sections end */}
 
     </div>
   );
