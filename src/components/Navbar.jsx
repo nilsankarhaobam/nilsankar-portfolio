@@ -13,6 +13,8 @@ const Navbar = () => {
     }
   return (
     <div className="navbar bg-base-100 shadow-sm">
+
+        {/* Mobile View */}
         <div className="navbar-start">
             <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,8 +34,10 @@ const Navbar = () => {
                 <li><a>Coming Soon</a></li>
             </ul>
             </div>
-            <a className="btn btn-ghost text-xl">Nilsankar&apos;s Lab</a>
+            <Link href="/" className="btn btn-ghost text-xl">Nilsankar&apos;s Lab</Link>
         </div>
+
+        {/* Desktop View */}
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
             <li><Link href='/'>Home</Link></li>
@@ -47,7 +51,7 @@ const Navbar = () => {
                 </ul>
                 </details>
             </li>
-            <li><a>Coming Soon</a></li>
+            <li><Link href='/about'>About</Link></li>
             </ul>
         </div>
         <div className="navbar-end">
