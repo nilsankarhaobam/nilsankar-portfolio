@@ -31,7 +31,7 @@ const Navbar = () => {
                     <li><a>Coming Soon</a></li>
                 </ul>
                 </li>
-                <li><a>Coming Soon</a></li>
+                <li><Link href='/about'>About</Link></li>
             </ul>
             </div>
             <Link href="/" className="btn btn-ghost text-xl">Nilsankar&apos;s Lab</Link>
