@@ -32,10 +32,10 @@ const Footer = () => {
     <div>
       <h3 className="text-white font-semibold mb-4 uppercase text-xs tracking-widest">Resources</h3>
       <ul className="space-y-2 text-sm text-neutral-content/80">
-        <li><Link href="/documents" className="hover:text-white transition-colors">Documentation</Link></li>
-        <li><Link href="/models" className="hover:text-white transition-colors">AI Models</Link></li>
-        <li><Link href="/openSource" className="hover:text-white transition-colors">Open Source</Link></li>
-        <li><Link href="techStack" className="hover:text-white transition-colors">Tech Stack</Link></li>
+        <li><Link href="#" className="hover:text-white transition-colors">Documentation</Link></li>
+        <li><Link href="#" className="hover:text-white transition-colors">AI Models</Link></li>
+        <li><Link href="#" className="hover:text-white transition-colors">Open Source</Link></li>
+        <li><Link href="#" className="hover:text-white transition-colors">Tech Stack</Link></li>
       </ul>
     </div>
 
@@ -44,8 +44,8 @@ const Footer = () => {
       <h3 className="text-white font-semibold uppercase text-xs tracking-widest">Stay Connected</h3>
       <div className="flex gap-4">
          {/* You can add Social Icons here */}
-         <Link href="/github" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all">Github</Link>
-         <Link href="/linkedin" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all">LinkedIn</Link>
+         <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all">Github</Link>
+         <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all">LinkedIn</Link>
       </div>
       <p className="text-xs text-neutral-content/60 italic">
         "The universe is under no obligation to make sense to you."
@@ -57,8 +57,8 @@ const Footer = () => {
   <div className="max-w-7xl mx-auto border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-content/50">
     <p>© {new Date().getFullYear()} Nilsankar Singha. All rights reserved.</p>
     <div className="flex gap-6">
-      <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-      <Link href="/termsConditions" className="hover:text-white transition-colors">Terms of Service</Link>
+      <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+      <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
     </div>
   </div>
 </footer>
